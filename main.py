@@ -91,7 +91,7 @@ class TestSetup:
         print(f'Based on the historical data, the calculated test duration: {self.test_duration} days.')
         # We usually want to make the test duration to be full weeks
         print(
-            f'To make the test duration to be full week, the adjusted test duration: {math.ceil(self.test_duration / 7) * 7} days.')
+            f'To make the test duration to be full week, the adjusted test duration: {math.ceil(self.test_duration / 7) * 7} days({math.ceil(self.test_duration / 7)} weeks).')
         print('\nBudget needed for the test:')
         print(f'Cost per user:', f'{self.cost_per_user:.2f}')
         print(f'Total budget:', f'{self.total_spend_needed:.2f}')
@@ -136,7 +136,7 @@ class ValidityChecks:
         return observed, expected, chi_stats, p_value
 
     def print_analysis_result(self):
-        print('-----------------------------------Validity Checks------------------------------------------')
+        print('-----------------------------------Validity Checks-------------------------------------------')
         print('AA Test:')
         print('Group by the AA test groups, and calculate the average sales for each group:')
         print(self.aa_avg_sales_per_group)
@@ -250,7 +250,7 @@ class ConductStatisticalInference:
         print('\nConfidence Interval:')
         print(f'Absolute Difference CI: ({self.lb:.3f}, {self.ub:.3f})')
         print(f'Relative Difference (lift) CI: ({lower_lift * 100:.3f}%, {upper_lift * 100:.3f}%)')
-        print('----------------------------------------------------------------------------------------------')
+        print('---------------------------------------------------------------------------------------------')
 
 
 historical_daily_sales_path = 'historical_daily_sales.csv'
