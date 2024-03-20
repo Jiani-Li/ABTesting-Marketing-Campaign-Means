@@ -5,10 +5,6 @@ from ValidityChecks import ValidityChecks
 from StatisticalInference import ConductStatisticalInference
 
 
-# List all the files which are needed in the test
-paths = ['historical_daily_sales.csv', 'historical_daily_users.csv', 'pretest_data.csv', 'abtest_result.csv']
-file_info = FilesInfo(files_paths=paths)
-
 # List all the file paths
 historical_daily_sales_path = 'historical_daily_sales.csv'
 historical_daily_users_path = 'historical_daily_users.csv'
